@@ -77,7 +77,7 @@ class GridView(object):
             height = self.y_grid_num
             array_size = len(array)
             if array_size > width:
-                raise ArrayToLongError("The array size " + str(array_size) +
+                raise ArrayTooLongError("The array size " + str(array_size) +
                                       " is too big")
             else:
                 # start draw the array in grid
@@ -118,7 +118,7 @@ class CanNotDivideException(BaseException):
                 return self.__repr__()
 
 
-class ArrayToLongError(BaseException):
+class ArrayTooLongError(BaseException):
         def __init__(self, description):
                 self.description = description
 
